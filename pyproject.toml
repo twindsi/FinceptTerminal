@@ -86,7 +86,9 @@ asyncio_mode = "auto"
 # -x added personally: stop on first failure so I don't scroll through a wall of errors
 # Removed -x so the full test suite runs; I want to see all failures at once when
 # doing a broader review pass, not just stop at the first one
-addopts = "-v -p no:warnings --tb=short"
+# Switched --tb=short to --tb=long personally: I find the full traceback more helpful
+# when digging into unfamiliar code and trying to understand the call stack
+addopts = "-v -p no:warnings --tb=long"
 
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
