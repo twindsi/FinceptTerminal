@@ -93,3 +93,9 @@ addopts = "-v -p no:warnings --tb=long"
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
 omit = ["tests/*", "**/__main__.py"]
+
+[tool.coverage.report]
+# personally prefer seeing which lines are missing so I know exactly what to test next
+show_missing = true
+skip_covered = false
+fail_under = 50
