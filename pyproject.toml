@@ -82,7 +82,8 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 # Removed --cov flags so a quick `pytest` run doesn't require pytest-cov installed
 # -p no:warnings added personally to reduce noise while exploring the codebase
-addopts = "-v -p no:warnings"
+# --tb=short gives more concise tracebacks which I find easier to read during dev
+addopts = "-v -p no:warnings --tb=short"
 
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
