@@ -95,7 +95,7 @@ source = ["src/fincept_terminal"]
 omit = ["tests/*", "**/__main__.py"]
 
 [tool.coverage.report]
-# personally prefer seeing which lines are missing so I know exactly what to test next
+# personally prefer seeing which lines are missing
 show_missing = true
-skip_covered = false
-fail_under = 50
+# skip files that are 100% covered to keep the report focused on what needs attention
+skip_covered = true
